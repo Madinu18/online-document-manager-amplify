@@ -277,30 +277,42 @@ function UploadFileCard(props) {
                         {
                           title: "Mixed",
                           value:
-                            interpret.textInterpretation.sentiment.mixed.toFixed(
-                              3
-                            ) * 100,
+                            interpret?.textInterpretation?.sentiment?.mixed !=
+                            null
+                              ? interpret.textInterpretation.sentiment.mixed.toFixed(
+                                  3
+                                ) * 100
+                              : 0,
                         },
                         {
                           title: "Negative",
                           value:
-                            interpret.textInterpretation.sentiment.negative.toFixed(
-                              3
-                            ) * 100,
+                            interpret?.textInterpretation?.sentiment
+                              ?.negative != null
+                              ? interpret.textInterpretation.sentiment.negative.toFixed(
+                                  3
+                                ) * 100
+                              : 0,
                         },
                         {
                           title: "Neutral",
                           value:
-                            interpret.textInterpretation.sentiment.neutral.toFixed(
-                              3
-                            ) * 100,
+                            interpret?.textInterpretation?.sentiment?.neutral !=
+                            null
+                              ? interpret.textInterpretation.sentiment.neutral.toFixed(
+                                  3
+                                ) * 100
+                              : 0,
                         },
                         {
                           title: "Positive",
                           value:
-                            interpret.textInterpretation.sentiment.positive.toFixed(
-                              3
-                            ) * 100,
+                            interpret?.textInterpretation?.sentiment
+                              ?.positive != null
+                              ? interpret.textInterpretation.sentiment.positive.toFixed(
+                                  3
+                                ) * 100
+                              : 0,
                         },
                       ]}
                       hideFilter
